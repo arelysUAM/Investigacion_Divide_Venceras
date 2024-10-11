@@ -1,0 +1,7 @@
+C:\Users\Arelys Castillo\source\repos\Ejemplo2_Divide_y_Venceras\Ejemplo2_Divide_y_Venceras\bin\Debug\Ejemplo2_Divide_y_Venceras.exe.config
+C:\Users\Arelys Castillo\source\repos\Ejemplo2_Divide_y_Venceras\Ejemplo2_Divide_y_Venceras\bin\Debug\Ejemplo2_Divide_y_Venceras.exe
+C:\Users\Arelys Castillo\source\repos\Ejemplo2_Divide_y_Venceras\Ejemplo2_Divide_y_Venceras\bin\Debug\Ejemplo2_Divide_y_Venceras.pdb
+C:\Users\Arelys Castillo\source\repos\Ejemplo2_Divide_y_Venceras\Ejemplo2_Divide_y_Venceras\obj\Debug\Ejemplo2_Divide_y_Venceras.csproj.AssemblyReference.cache
+C:\Users\Arelys Castillo\source\repos\Ejemplo2_Divide_y_Venceras\Ejemplo2_Divide_y_Venceras\obj\Debug\Ejemplo2_Divide_y_Venceras.csproj.CoreCompileInputs.cache
+C:\Users\Arelys Castillo\source\repos\Ejemplo2_Divide_y_Venceras\Ejemplo2_Divide_y_Venceras\obj\Debug\Ejemplo2_Divide_y_Venceras.exe
+C:\Users\Arelys Castillo\source\repos\Ejemplo2_Divide_y_Venceras\Ejemplo2_Divide_y_Venceras\obj\Debug\Ejemplo2_Divide_y_Venceras.pdb

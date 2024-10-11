@@ -1,0 +1,7 @@
+C:\Users\Arelys Castillo\source\repos\Ejemplo2_Metodo Directo\Ejemplo2_Metodo Directo\bin\Debug\Ejemplo2_Metodo Directo.exe.config
+C:\Users\Arelys Castillo\source\repos\Ejemplo2_Metodo Directo\Ejemplo2_Metodo Directo\bin\Debug\Ejemplo2_Metodo Directo.exe
+C:\Users\Arelys Castillo\source\repos\Ejemplo2_Metodo Directo\Ejemplo2_Metodo Directo\bin\Debug\Ejemplo2_Metodo Directo.pdb
+C:\Users\Arelys Castillo\source\repos\Ejemplo2_Metodo Directo\Ejemplo2_Metodo Directo\obj\Debug\Ejemplo2_Metodo Directo.csproj.AssemblyReference.cache
+C:\Users\Arelys Castillo\source\repos\Ejemplo2_Metodo Directo\Ejemplo2_Metodo Directo\obj\Debug\Ejemplo2_Metodo Directo.csproj.CoreCompileInputs.cache
+C:\Users\Arelys Castillo\source\repos\Ejemplo2_Metodo Directo\Ejemplo2_Metodo Directo\obj\Debug\Ejemplo2_Metodo Directo.exe
+C:\Users\Arelys Castillo\source\repos\Ejemplo2_Metodo Directo\Ejemplo2_Metodo Directo\obj\Debug\Ejemplo2_Metodo Directo.pdb

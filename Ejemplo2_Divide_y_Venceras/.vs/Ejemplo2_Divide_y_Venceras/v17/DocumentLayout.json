@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Arelys Castillo\\source\\repos\\Ejemplo2_Divide_y_Venceras\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E4F64262-E4A6-4ED7-9B14-D0D15DE0757B}|Ejemplo2_Divide_y_Venceras\\Ejemplo2_Divide_y_Venceras.csproj|c:\\users\\arelys castillo\\source\\repos\\ejemplo2_divide_y_venceras\\ejemplo2_divide_y_venceras\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4F64262-E4A6-4ED7-9B14-D0D15DE0757B}|Ejemplo2_Divide_y_Venceras\\Ejemplo2_Divide_y_Venceras.csproj|solutionrelative:ejemplo2_divide_y_venceras\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Arelys Castillo\\source\\repos\\Ejemplo2_Divide_y_Venceras\\Ejemplo2_Divide_y_Venceras\\Program.cs",
+              "RelativeDocumentMoniker": "Ejemplo2_Divide_y_Venceras\\Program.cs",
+              "ToolTip": "C:\\Users\\Arelys Castillo\\source\\repos\\Ejemplo2_Divide_y_Venceras\\Ejemplo2_Divide_y_Venceras\\Program.cs",
+              "RelativeToolTip": "Ejemplo2_Divide_y_Venceras\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T14:46:45.281Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
