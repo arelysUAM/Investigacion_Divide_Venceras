@@ -57,86 +57,72 @@ namespace ejercicio1_metodoDivideyVenceras
 {
     internal class Program
     {
-        // Este método ordena el arreglo usando Quick Sort (es el algoritmo de ordenamiento del método dyv)
-        static void QuickSort(int[] arr, int low, int high)
+        // Método recursivo que ordena el arreglo dividiéndolo en partes más pequeñas
+        void Ordenar(int[] arr, int inicio, int fin)
         {
-            // Si hay más de un elemento para ordenar
-            if (low < high) // Aquí se aplica el "divide y vencerás"
+            if (inicio < fin)
             {
-                // Se obtiene la posición del pivote (que es el punto de referencia) después de organizar
-                int pivotIndex = Partition(arr, low, high);
-                // Se llama a QuickSort para ordenar la parte izquierda del pivote
-                QuickSort(arr, low, pivotIndex - 1);
-                // Se llama a QuickSort para ordenar la parte derecha del pivote
-                QuickSort(arr, pivotIndex + 1, high);
+                int mitad = (inicio + fin) / 2;    // Encuentra la mitad
+
+                Ordenar(arr, inicio, mitad);       // Ordena la primera mitad
+                Ordenar(arr, mitad + 1, fin);      // Ordena la segunda mitad
+                Combinar(arr, inicio, mitad, fin); // Combina ambas mitades
             }
         }
 
-        // Este método organiza los números alrededor del pivote
-        static int Partition(int[] arr, int low, int high)
+        // Método que une dos partes ya ordenadas en un solo arreglo ordenado
+        void Combinar(int[] arr, int inicio, int mitad, int fin)
         {
-            // Se elige el último número como pivote
-            int pivot = arr[high];
-            int i = low - 1; // i es el índice del elemento más pequeño
+            int[] temp = new int[fin - inicio + 1]; // Arreglo temporal
+            int i = inicio;       // Índice para la primera mitad
+            int j = mitad + 1;    // Índice para la segunda mitad
+            int k = 0;            // Índice para el arreglo temporal
 
-            // Se recorre los números desde low hasta high
-            for (int j = low; j < high; j++)
+            // Comparar elementos de las dos mitades y agregarlos en orden al arreglo temporal
+            while (i <= mitad && j <= fin)
             {
-                // Condicional por si se encuntra un número menor que el pivote
-                if (arr[j] < pivot)
-                {
-                    i++; // Se aumenta el índice del elemento más pequeño
-                    Swap(arr, i, j); // y despues se intercambian los números
-                }
+                if (arr[i] <= arr[j])
+                    temp[k++] = arr[i++];  // Agregar el número de la primera mitad si es menor
+                else
+                    temp[k++] = arr[j++];  // Si no, agregar el de la segunda mitad
             }
-            // Se coloca el pivote en su lugar correcto
-            Swap(arr, i + 1, high);
-            return i + 1; // Devolvemos la posición del pivote
-        }
 
-        // Este método intercambia dos números en el arreglo
-        static void Swap(int[] arr, int i, int j)
-        {
-            int temp = arr[i]; // Se guarda el número en la posición i
-            arr[i] = arr[j]; // Se coloca el número en la posición j en la posición i
-            arr[j] = temp; // Se coloca el número guardado en la posición j
+            // Copiar lo que queda de la primera y segunda mitad
+            while (i <= mitad) temp[k++] = arr[i++];
+            while (j <= fin) temp[k++] = arr[j++];
+
+            // Poner los valores ordenados de nuevo en el arreglo original
+            for (i = inicio, k = 0; i <= fin; i++, k++)
+                arr[i] = temp[k];
         }
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Programa que ordena números ENTEROS");
-            Console.WriteLine();
-            // Se pide al usuario que ingrese números
-            Console.WriteLine("Ingrese números separados por espacio: ");
-            string input = Console.ReadLine(); // Se lee 
+            Program programa = new Program();
 
-            // Se intenta (por eso el try) convertir la entrada a un arreglo de enteros
-            try
-            {
-                // Se convierte la cadena de texto en un arreglo de números
-                int[] numbers = Array.ConvertAll(input.Split(' '), int.Parse);
+            // Pedir al usuario que ingrese cuántos números quiere ordenar
+            Console.Write("Cantidad de números: ");
+            int n = int.Parse(Console.ReadLine());
+            int[] numeros = new int[n]; // Crear el arreglo de números con la cantidad indicada
 
-                // Se llama al método QuickSort para ordenar los números
-                QuickSort(numbers, 0, numbers.Length - 1);
-
-                // Se muestra los números ordenados
-                Console.WriteLine("Números ordenados:");
-                Console.WriteLine(string.Join(", ", numbers));
-            }
-            catch (FormatException) // Si hay un error de formato
+            // Pedir al usuario que ingrese cada número del arreglo
+            for (int i = 0; i < n; i++)
             {
-                // Mostramos un mensaje de error
-                Console.WriteLine("Error: Asegúrese de ingresar solo números enteros separados por espacios.");
-            }
-            catch (OverflowException) // Si hay un error de desbordamiento
-            {
-                // Mostramos un mensaje de error
-                Console.WriteLine("Error: Uno o más números son demasiado grandes o pequeños.");
+                Console.Write($"Número {i + 1}: ");
+                numeros[i] = int.Parse(Console.ReadLine());
             }
 
-            // Esperamos a que el usuario presione una tecla antes de cerrar
-            Console.WriteLine("Presione cualquier tecla para continuar...");
-            Console.ReadKey();
+            // Llamar al método para ordenar los números usando el algoritmo de dividir y vencerás
+            programa.Ordenar(numeros, 0, n - 1);
+
+            // Mostrar el arreglo de números ya ordenados utilizando for
+            Console.WriteLine("Números ordenados:");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(numeros[i] + " "); // Imprimir cada número ordenado
+            }
+
+            Console.ReadKey(); 
         }
     }
 }
