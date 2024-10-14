@@ -102,7 +102,7 @@ namespace ejemplo2_DivideyVenceras
                 numeros[i] = int.Parse(Console.ReadLine());
             }
 
-            Console.Write("Ingrese k (k-ésimo más grande): ");
+            Console.Write("Ingrese k - k-ésimo más grande: ");
             int k = int.Parse(Console.ReadLine());
 
             // Validar k
