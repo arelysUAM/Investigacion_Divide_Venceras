@@ -53,43 +53,47 @@ namespace ejemplo3_DivideyVenceras
 {
     internal class Program
     {
-        // Método para encontrar el máximo 
-        static int FindMax(int[] arr, int low, int high)
+        // Método para encontrar el número máximo en un arreglo
+        static int EncontrarMaximo(int[] arr, int inicio, int fin)
         {
-            // Caso base: si solo queda un elemento, es el máximo en esa porción
-            if (low == high)
+            // Si solo hay un elemento, devolverlo
+            if (inicio == fin)
             {
-                return arr[low]; // Se devuelve el único elemento
+                return arr[inicio];
             }
 
-            // Se divide el arreglo en dos mitades
-            int mid = (low + high) / 2;
+            // Calcular el punto medio
+            int mitad = (inicio + fin) / 2;
 
-            // Se busca el máximo en la mitad izquierda aqui se usa el divide y vencerás)
-            int leftMax = FindMax(arr, low, mid);
+            // Llamadas recursivas para encontrar el máximo en ambas mitades
+            int maxIzquierda = EncontrarMaximo(arr, inicio, mitad);
+            int maxDerecha = EncontrarMaximo(arr, mitad + 1, fin);
 
-            // Se busca el máximo en la mitad derecha aqui se usa el divide y vencerás
-            int rightMax = FindMax(arr, mid + 1, high);
-
-            // Se compara el máximo de ambas mitades y se devuelve el más grande
-            return Math.Max(leftMax, rightMax);
+            // Comparar y devolver el máximo de las dos mitades
+            return Math.Max(maxIzquierda, maxDerecha);
         }
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Programa para encontrar el máximo en una lista de numeros (ENTEROS)");
-            Console.WriteLine();
-            // Se pide al usuario que ingrese una serie de números separados por espacio
-            Console.Write("Ingrese números separados por espacio: ");
-            int[] numbers = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+            // Pedir la cantidad de elementos
+            Console.Write("Ingrese la cantidad de números a ingresar: ");
+            int n = int.Parse(Console.ReadLine());
 
-            // Llama al método FindMax para encontrar el número más grande
-            int maxNumber = FindMax(numbers, 0, numbers.Length - 1);
+            // Crear el arreglo
+            int[] numeros = new int[n];
 
-            // Se muestra el número más grande
-            Console.WriteLine($"El número más grande es: {maxNumber}");
+            // Ingresar los elementos del arreglo
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write($"Número {i + 1}: ");
+                numeros[i] = int.Parse(Console.ReadLine());
+            }
 
-            Console.WriteLine("Presione cualquier tecla para continuar...");
+            // Llamar al método para encontrar el número máximo
+            int maximo = EncontrarMaximo(numeros, 0, n - 1);
+
+            // Imprimir el resultado
+            Console.WriteLine("El número más grande en el arreglo es: " + maximo);
             Console.ReadKey();
         }
     }
